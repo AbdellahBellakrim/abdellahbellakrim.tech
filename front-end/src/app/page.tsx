@@ -1,7 +1,3 @@
-import Image from 'next/image'
-
 export default function Home() {
-  return (
-    <div>Intial state</div>
-  )
+  return <div></div>;
 }
