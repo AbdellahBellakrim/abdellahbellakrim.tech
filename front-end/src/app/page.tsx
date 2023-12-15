@@ -12,7 +12,7 @@ export default function LadingPage() {
     <main>
       <section
         id="Home"
-        className="h-[calc(100vh-65px)] w-full flex justify-center items-center  flex-col p-[3px]"
+        className="h-[calc(100vh-65px)] w-full flex justify-center items-center  flex-col p-[3px] gap-6"
         style={{
           backgroundImage: 'url("bg-image2.png")',
           backgroundPosition: "center",
@@ -30,9 +30,20 @@ export default function LadingPage() {
         >
           software engineer - web developer{" "}
         </h3>
-        {/* <div>
-          <img src="VectorCVButton.svg" alt="VectorCVButton.svg" />
-        </div> */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 w-1/8 col-auto">
+          <div className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70">
+            <img src="cvicon.svg" alt="cvicon.svg" />
+          </div>
+          <div className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70">
+            <img src="linkendinicon.svg" alt="linkendinicon.svg" />
+          </div>
+          <div className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70">
+            <img src="twittericon.svg" alt="twittericon.svg" />
+          </div>
+          <div className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70">
+            <img src="githubicon.svg" alt="githubicon.svg" />
+          </div>
+        </div>
       </section>
     </main>
   );
