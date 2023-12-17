@@ -1,5 +1,6 @@
 "use client";
 
+import SkillsCard from "@/components/SkillsCard";
 import { motion } from "framer-motion";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
@@ -11,10 +12,12 @@ const PoppinsFont = Poppins({
 
 export default function LadingPage() {
   return (
-    <main className="h-full w-full flex flex-col gap-8 bg-[#3A3A3A]">
+    <main
+      className={`h-full w-full flex flex-col bg-[#212121] ${PoppinsFont.className}`}
+    >
       <section
         id="Home"
-        className="h-[calc(100vh-65px)] w-full flex justify-center items-center  flex-col p-[10px] gap-6 relative z-[1]"
+        className="min-h-[calc(100vh-65px)] w-full flex justify-center items-center  flex-col p-[10px] gap-6 relative z-[1] overflow-x-hidden"
         style={{
           backgroundImage: 'url("bg-image2.png")',
           backgroundPosition: "center",
@@ -28,7 +31,7 @@ export default function LadingPage() {
           transition={{
             duration: 1,
           }}
-          className={`${PoppinsFont.className} font-semibold text-[3.8em] md:text[4.8em] lg:text-[5em] text-center bg-clip-text text-transparent bg-[linear-gradient(to_left,theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.amber.500),theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.blue.500),theme(colors.indigo.100),theme(colors.indigo.100))] bg-[length:200%_auto] animate-gradient`}
+          className={`${PoppinsFont.className} font-semibold text-[3.8em] md:text[4.8em] lg:text-[5em] text-center bg-clip-text text-transparent bg-[linear-gradient(to_left,theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.amber.600),theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.blue.600),theme(colors.indigo.100),theme(colors.indigo.100))] bg-[length:200%_auto] animate-gradient`}
         >
           I’m Abdelah Bellakrim
         </motion.h1>
@@ -80,7 +83,7 @@ export default function LadingPage() {
           </Link>
         </motion.div>
         {/* <svg
-          className="absolute bottom-[-1px] z-[-1]"
+          className="absolute bottom-[-5px] z-[-1]"
           id="wave"
           style={{ transform: "rotate(0deg)", transition: "0.3s" }}
           viewBox="0 0 1440 100"
@@ -102,47 +105,74 @@ export default function LadingPage() {
       </section>
       <section
         id="about"
-        className="min-h-[80vh] w-full flex flex-col p-[10px] items-center"
+        className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-8"
       >
-        <div className=" w-full lg:max-w-[1440px] flex flex-col lg:flex-row-reverse lg:gap-8">
+        <div className=" w-full lg:max-w-[1440px] flex flex-col lg:flex-row-reverse gap-8 h-fit">
           <div className="w-full lg:w-[50%]">
-            <h2>ABOUT ME</h2>
-            <h1>I’m Abdelah Bellakrim</h1>
-            <p>
-              I am a Software Engineer and web developer, proud graduate of the
-              esteemed 1337 coding school. My academic journey equipped me with
-              a diverse skill set, emphasizing problem-solving. I've
-              successfully completed various projects during my studies,
-              showcasing my ability to break down complex issues and utilize
-              technologies like C/C++, JavaScript, Next.js, React.js, Nest.js,
-              HTML, CSS, Tailwind, and Docker.
-            </p>
-            <p>
-              My passion lies in algorithms, data structures, and
-              problem-solving—crucial aspects of the web development field. I
-              thrive on staying updated with industry trends and continuously
-              expanding my knowledge. Proficient in a range of languages and
-              frameworks, including Next.js, React.js, Nest.js, and more, I'm
-              dedicated to delivering effective and innovative solutions to the
-              ever-evolving challenges of web development.
-            </p>
-            <p>
-              In summary, I'm driven by a continuous desire to learn and adapt,
-              ensuring that I remain at the forefront of technological
-              advancements. As a Software Engineer, I am enthusiastic about
-              leveraging my expertise to create efficient and scalable solutions
-              that address the evolving challenges of the digital landscape.
-            </p>
+            <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
+              ABOUT ME
+            </h2>
+            <h1 className="text-white text-[36px] font-semibold">
+              I’m Abdelah Bellakrim
+            </h1>
+            <div className="text-[#B0ADAD] text-[16px] font-normal flex flex-col gap-4 text-justify tracking-tight">
+              <p>
+                A Software Engineer and web developer, proud graduate of the
+                esteemed 1337 coding school. My academic journey equipped me
+                with a diverse skill set, emphasizing problem-solving. I've
+                successfully completed various projects during my studies,
+                showcasing my ability to break down complex issues and utilize
+                technologies like C/C++, JavaScript, Next.js, React.js, Nest.js,
+                HTML, CSS, Tailwind, Docker , etc.
+              </p>
+              <p>
+                My passion lies in algorithms, data structures, and
+                problem-solving—crucial aspects of the web development field. I
+                thrive on staying updated with industry trends and continuously
+                expanding my knowledge. Proficient in a range of languages and
+                frameworks, including Next.js, React.js, Nest.js, and more, I'm
+                dedicated to delivering effective and innovative solutions to
+                the ever-evolving challenges of web development.
+              </p>
+              <p>
+                In summary, I'm driven by a continuous desire to learn and
+                adapt, ensuring that I remain at the forefront of technological
+                advancements. As a Software Engineer, I am enthusiastic about
+                leveraging my expertise to create efficient and scalable
+                solutions that address the evolving challenges of the digital
+                landscape.
+              </p>
+            </div>
           </div>
-          <div className="lg:w-[50%] w-full flex justify-center items-center">
-            <img
-              src="goat.jpg"
-              alt="goat.jpg"
-              className="object-cover w-[80%] sm:w-[425px] sm:h-[421px]"
-            />
+
+          <div className="lg:w-[50%] flex justify-center items-center">
+            <div className="h-full w-full  z-[1] flex items-center justify-center">
+              <div className="w-[80%] max-w-[390px] lg:min-w-[390px] p-[2px] relative z-[1]">
+                <img
+                  src="goat.jpg"
+                  alt="goat.jpg"
+                  className="object-cover w-full h-full rounded-tl-2xl rounded-br-2xl z-[1]"
+                />
+                <div className="border-[2px] border-white bg-transparent w-full h-full  rounded-tl-2xl rounded-br-2xl z-[-1]  p-3 m-3  absolute left-[2px] top-[2px]"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="flex justify-center items-start">what I do</div>
+
+        <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit">
+          <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
+            what I do
+          </h2>
+          <h1 className="text-white text-[36px] font-semibold text-center">
+            SPECIALIZING IN
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2  2xl:grid-cols-4 gap-4 mt-4 ">
+            <SkillsCard></SkillsCard>
+            <SkillsCard></SkillsCard>
+            <SkillsCard></SkillsCard>
+            <SkillsCard></SkillsCard>
+          </div>
+        </div>
       </section>
       {/* <section id="work" className="h-[90vh] bg-[#3A3A3A] flex">
         <div>work</div>
