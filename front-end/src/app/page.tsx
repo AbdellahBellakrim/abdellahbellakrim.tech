@@ -4,6 +4,9 @@ import SkillsCard from "@/components/SkillsCard";
 import { motion } from "framer-motion";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { db } from "@/lib/firebase.config";
+import { collection, getDocs } from "firebase/firestore";
 
 const PoppinsFont = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -11,6 +14,17 @@ const PoppinsFont = Poppins({
 });
 
 export default function LadingPage() {
+  const [skills, setSkills]: any = useState([]);
+  const skillsCollectionRef = collection(db, "skills");
+
+  useEffect(() => {
+    const getSkills = async () => {
+      const data = await getDocs(skillsCollectionRef);
+      setSkills(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getSkills();
+  }, [skillsCollectionRef]);
+
   return (
     <main
       className={`h-full w-full flex flex-col bg-[#212121] ${PoppinsFont.className}`}
@@ -117,30 +131,30 @@ export default function LadingPage() {
             </h1>
             <div className="text-[#B0ADAD] text-[16px] font-normal flex flex-col gap-4 text-justify tracking-tight">
               <p>
-                A Software Engineer and web developer, proud graduate of the
+                {`                A Software Engineer and web developer, proud graduate of the
                 esteemed 1337 coding school. My academic journey equipped me
                 with a diverse skill set, emphasizing problem-solving. I've
                 successfully completed various projects during my studies,
                 showcasing my ability to break down complex issues and utilize
                 technologies like C/C++, JavaScript, Next.js, React.js, Nest.js,
-                HTML, CSS, Tailwind, Docker , etc.
+                HTML, CSS, Tailwind, Docker , etc.`}
               </p>
               <p>
-                My passion lies in algorithms, data structures, and
+                {`                My passion lies in algorithms, data structures, and
                 problem-solving—crucial aspects of the web development field. I
                 thrive on staying updated with industry trends and continuously
                 expanding my knowledge. Proficient in a range of languages and
                 frameworks, including Next.js, React.js, Nest.js, and more, I'm
                 dedicated to delivering effective and innovative solutions to
-                the ever-evolving challenges of web development.
+                the ever-evolving challenges of web development.`}
               </p>
               <p>
-                In summary, I'm driven by a continuous desire to learn and
+                {`                In summary, I'm driven by a continuous desire to learn and
                 adapt, ensuring that I remain at the forefront of technological
                 advancements. As a Software Engineer, I am enthusiastic about
                 leveraging my expertise to create efficient and scalable
                 solutions that address the evolving challenges of the digital
-                landscape.
+                landscape.`}
               </p>
             </div>
           </div>
@@ -166,11 +180,17 @@ export default function LadingPage() {
           <h1 className="text-white text-[36px] font-semibold text-center">
             SPECIALIZING IN
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2  2xl:grid-cols-4 gap-4 mt-4 ">
-            <SkillsCard></SkillsCard>
-            <SkillsCard></SkillsCard>
-            <SkillsCard></SkillsCard>
-            <SkillsCard></SkillsCard>
+          <div className="grid grid-cols-1 md:grid-cols-2  2xl:grid-cols-4 gap-4 mt-4 min-h-[210px]">
+            {skills.map((map: any) => {
+              return (
+                <SkillsCard
+                  header={map.header}
+                  banner={map.banner}
+                  content={map.content}
+                  key={map.id}
+                ></SkillsCard>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -1,23 +1,18 @@
 import React from "react";
 import { Card, CardHeader, CardBody, Divider, Image } from "@nextui-org/react";
 
-export default function SkillsCard() {
+export default function SkillsCard(props: any) {
   return (
-    <Card className="max-w-[400px] bg-[#292C36] shadow-none text-[#B0ADAD] h-fit">
+    <Card className="max-w-[400px] bg-[#292C36] shadow-none text-[#B0ADAD] h-[210px]">
       <CardHeader className="flex gap-3 h-[40%]">
         <div className="w-[42px] h-[42px] rounded-md bg-[#38405A] flex justify-center items-center">
-          <Image
-            alt="nextui logo"
-            height={30}
-            width={30}
-            src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-          />
+          <Image alt="nextui logo" height={30} width={30} src={props.banner} />
         </div>
-        <div className="flex flex-col text-white">l3onwan</div>
+        <div className="flex flex-col text-white">{props.header}</div>
       </CardHeader>
       <Divider />
       <CardBody>
-        <p>Make beautiful websites regardless of your design experience.</p>
+        <p>{props.content}</p>
       </CardBody>
     </Card>
   );
