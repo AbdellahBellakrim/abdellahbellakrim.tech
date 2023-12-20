@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import ProjectCard from "@/components/ProjectCard";
+import { Button } from "@nextui-org/react";
 
 const PoppinsFont = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -135,7 +136,7 @@ export default function LadingPage() {
             <h1 className="text-white text-[36px] font-semibold">
               I’m Abdelah Bellakrim
             </h1>
-            <div className="text-[#B0ADAD] text-[16px] font-normal flex flex-col gap-4 text-justify tracking-tight">
+            <div className="text-[#B0ADAD] text-[18px] font-normal flex flex-col gap-4 text-justify tracking-tight">
               <p>
                 {`                A Software Engineer and web developer, proud graduate of the
                 esteemed 1337 coding school. My academic journey equipped me
@@ -202,41 +203,50 @@ export default function LadingPage() {
       </section>
       <section
         id="work"
-        className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-8"
+        className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-14"
       >
-        <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit">
-          <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
-            PORTFOLIO
-          </h2>
-          <h1 className="text-white text-[36px] font-semibold text-center">
-            LATEST PROJECTS
-          </h1>
+        <div className="w-full h-full tex-center flex justify-center items-center flex-col gap-8">
+          <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit ">
+            <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
+              PORTFOLIO
+            </h2>
+            <h1 className="text-white text-[36px] font-semibold text-center">
+              LATEST PROJECTS
+            </h1>
+          </div>
+          <Swiper
+            breakpoints={breakpoints}
+            spaceBetween={30}
+            autoplay={{
+              delay: 500,
+              disableOnInteraction: false,
+            }}
+            speed={2000}
+            loop={true}
+            modules={[Autoplay]}
+            className="w-[100%] 2xl:w-[70%] max-w-[1440px]"
+          >
+            {skill.map((map: any) => {
+              return (
+                <SwiperSlide key={map.id}>
+                  <ProjectCard
+                    header={map.header}
+                    banner={map.banner}
+                    content={map.content}
+                  ></ProjectCard>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
-        <Swiper
-          breakpoints={breakpoints}
-          spaceBetween={30}
-          autoplay={{
-            delay: 500,
-            disableOnInteraction: false,
-          }}
-          speed={2000}
-          loop={true}
-          modules={[Autoplay]}
-          className="w-[100%] xl:w-[70%] max-w-[1440px]"
-        >
-          {skill.map((map: any) => {
-            return (
-              <SwiperSlide key={map.id}>
-                <ProjectCard
-                  header={map.header}
-                  banner={map.banner}
-                  content={map.content}
-                ></ProjectCard>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        <div className="w-full lg:max-w-[980px] h-[277px] tex-center flex justify-center items-center bg-[#292C36] rounded-xl flex-col gap-6 p-4">
+          <div className="text-white text-[36px] font-semibold text-center">
+            Have any project in mind ?
+          </div>
+          <Button className="bg-[#0070F0] rounded-xl">Contact me</Button>
+        </div>
       </section>
+      <footer className="w-full h-[156px] bg-[#292C36]"></footer>
     </main>
   );
 }

@@ -10,7 +10,7 @@ export const skills: skill[] = [
     id: "001",
     header: "Front-end Development",
     content: "hello",
-    banner: "front-end-dev-icon.svg",
+    banner: "goat.jpg",
   },
   {
     id: "002",
