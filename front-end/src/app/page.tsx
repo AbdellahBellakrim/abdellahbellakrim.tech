@@ -177,7 +177,7 @@ export default function LadingPage() {
           <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
             what I do
           </h2>
-          <h1 className="text-white text-[36px] font-semibold text-center">
+          <h1 className="text-white text-[36px] font-semibold text-center ">
             SPECIALIZING IN
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2  2xl:grid-cols-4 gap-4 mt-4 min-h-[210px]">
@@ -194,9 +194,19 @@ export default function LadingPage() {
           </div>
         </div>
       </section>
-      {/* <section id="work" className="h-[90vh] bg-[#3A3A3A] flex">
-        <div>work</div>
-      </section> */}
+      <section
+        id="work"
+        className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-8"
+      >
+        <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit">
+          <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
+            PORTFOLIO
+          </h2>
+          <h1 className="text-white text-[36px] font-semibold text-center">
+            LATEST PROJECTS
+          </h1>
+        </div>
+      </section>
     </main>
   );
 }
