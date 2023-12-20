@@ -5,25 +5,31 @@ import { motion } from "framer-motion";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { db } from "@/lib/firebase.config";
-import { collection, getDocs } from "firebase/firestore";
+import { skills } from "@/lib/data";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/bundle";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import ProjectCard from "@/components/ProjectCard";
 
 const PoppinsFont = Poppins({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
+const breakpoints = {
+  // Define breakpoints and the number of slides to show at each breakpoint
+  320: { slidesPerView: 1 },
+  480: { slidesPerView: 2 },
+  768: { slidesPerView: 2 },
+  1024: { slidesPerView: 3 },
+  // Add more breakpoints as needed
+};
 export default function LadingPage() {
-  const [skills, setSkills]: any = useState([]);
-  const skillsCollectionRef = collection(db, "skills");
+  const [skill, setSkills]: any = useState([]);
 
   useEffect(() => {
-    const getSkills = async () => {
-      const data = await getDocs(skillsCollectionRef);
-      setSkills(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-    getSkills();
-  }, [skillsCollectionRef]);
+    setSkills(skills);
+  }, [skills]);
 
   return (
     <main
@@ -180,8 +186,8 @@ export default function LadingPage() {
           <h1 className="text-white text-[36px] font-semibold text-center ">
             SPECIALIZING IN
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2  2xl:grid-cols-4 gap-4 mt-4 min-h-[210px]">
-            {skills.map((map: any) => {
+          <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-6 mt-4 min-h-[210px]">
+            {skill.map((map: any) => {
               return (
                 <SkillsCard
                   header={map.header}
@@ -206,6 +212,30 @@ export default function LadingPage() {
             LATEST PROJECTS
           </h1>
         </div>
+        <Swiper
+          breakpoints={breakpoints}
+          spaceBetween={30}
+          autoplay={{
+            delay: 500,
+            disableOnInteraction: false,
+          }}
+          speed={2000}
+          loop={true}
+          modules={[Autoplay]}
+          className="w-[100%] xl:w-[70%] max-w-[1440px]"
+        >
+          {skill.map((map: any) => {
+            return (
+              <SwiperSlide key={map.id}>
+                <ProjectCard
+                  header={map.header}
+                  banner={map.banner}
+                  content={map.content}
+                ></ProjectCard>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </section>
     </main>
   );
