@@ -261,7 +261,6 @@ export default function LadingPage() {
           </Button>
         </div>
       </section>
-      <footer className="w-full h-[156px] bg-[#292C36]"></footer>
     </main>
   );
 }

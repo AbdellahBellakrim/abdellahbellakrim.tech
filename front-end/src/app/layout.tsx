@@ -23,8 +23,15 @@ export default function RootLayout({
         <Providers>
           <NavBar />
           {children}
+          <footer className="w-full h-[65px] bg-[#292C36] flex justify-center items-center p-2 border-t border-divider">
+            <div className="text-white font-bold text-center">
+              <p>{`DESIGNED AND BUILT BY ABDELLAH BELLAKRIM © ${new Date().getFullYear()}`}</p>
+            </div>
+          </footer>
         </Providers>
       </body>
     </html>
   );
 }
+
+// class="flex z-40 w-full items-center justify-center data-[menu-open=true]:border-none top-0 inset-x-0 border-b border-divider backdrop-blur-lg data-[menu-open=true]:backdrop-blur-xl backdrop-saturate-150 bg-background/70 h-[65px] fixed"
