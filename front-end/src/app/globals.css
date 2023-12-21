@@ -7,3 +7,12 @@
   margin: 0;
   padding: 0;
 }
+
+section::before {
+  content: "";
+  display: block;
+  height: 65px; /* Replace [NavbarHeight] with the height of your navbar */
+  margin-top: -65px; /* Same value as above, but negative */
+  visibility: hidden;
+  pointer-events: none;
+}

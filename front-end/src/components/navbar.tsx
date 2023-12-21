@@ -18,7 +18,11 @@ export default function NavBar() {
   const menuItems = ["Home", "About", "Work", "Contact"];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered className="h-[65px]">
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      isBordered
+      className="h-[65px] fixed"
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -43,7 +47,7 @@ export default function NavBar() {
             <Link
               color="foreground"
               className="w-full font-semibold"
-              href="#"
+              href={item === "Contact" ? `/contact` : `/#${item}`}
               size="lg"
             >
               {item}
@@ -63,7 +67,7 @@ export default function NavBar() {
                   : "foreground"
               }
               className="w-full"
-              href="#"
+              href={item === "Contact" ? `/contact` : `/#${item}`}
               size="lg"
             >
               {item}

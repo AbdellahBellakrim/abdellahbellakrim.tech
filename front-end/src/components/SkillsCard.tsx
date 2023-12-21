@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, CardHeader, CardBody, Divider, Image } from "@nextui-org/react";
+import { skill } from "@/lib/data";
 
-export default function SkillsCard(props: any) {
+export default function SkillsCard(props: skill) {
   return (
     <Card className="max-w-[480px] bg-[#292C36] shadow-none text-[#B0ADAD] min-h-[210px] h-fit">
       <CardHeader className="flex gap-3 h-[40%]">

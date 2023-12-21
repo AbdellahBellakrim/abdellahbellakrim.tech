@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { skills } from "@/lib/data";
+import { skills, projects } from "@/lib/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import ProjectCard from "@/components/ProjectCard";
 import { Button } from "@nextui-org/react";
 
@@ -27,10 +27,12 @@ const breakpoints = {
 };
 export default function LadingPage() {
   const [skill, setSkills]: any = useState([]);
+  const [project, setProject]: any = useState([]);
 
   useEffect(() => {
     setSkills(skills);
-  }, [skills]);
+    setProject(projects);
+  }, [skills, projects]);
 
   return (
     <main
@@ -38,7 +40,7 @@ export default function LadingPage() {
     >
       <section
         id="Home"
-        className="min-h-[calc(100vh-65px)] w-full flex justify-center items-center  flex-col p-[10px] gap-6 relative z-[1] overflow-x-hidden"
+        className="min-h-screen w-full flex justify-center items-center  flex-col p-[10px] gap-6 relative z-[1] overflow-x-hidden"
         style={{
           backgroundImage: 'url("bg-image2.png")',
           backgroundPosition: "center",
@@ -125,8 +127,8 @@ export default function LadingPage() {
         </svg> */}
       </section>
       <section
-        id="about"
-        className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-8"
+        id="About"
+        className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-14"
       >
         <div className=" w-full lg:max-w-[1440px] flex flex-col lg:flex-row-reverse gap-8 h-fit">
           <div className="w-full lg:w-[50%]">
@@ -194,6 +196,7 @@ export default function LadingPage() {
                   header={map.header}
                   banner={map.banner}
                   content={map.content}
+                  id={map.id}
                   key={map.id}
                 ></SkillsCard>
               );
@@ -202,7 +205,7 @@ export default function LadingPage() {
         </div>
       </section>
       <section
-        id="work"
+        id="Work"
         className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-14"
       >
         <div className="w-full h-full tex-center flex justify-center items-center flex-col gap-8">
@@ -226,13 +229,15 @@ export default function LadingPage() {
             modules={[Autoplay]}
             className="w-[100%] 2xl:w-[70%] max-w-[1440px]"
           >
-            {skill.map((map: any) => {
+            {project.map((map: any) => {
               return (
                 <SwiperSlide key={map.id}>
                   <ProjectCard
+                    id={map.id}
                     header={map.header}
                     banner={map.banner}
-                    content={map.content}
+                    link={map.link}
+                    key={map.id}
                   ></ProjectCard>
                 </SwiperSlide>
               );
