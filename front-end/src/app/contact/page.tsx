@@ -1,6 +1,5 @@
-
 export default function Home() {
   return (
-    <div>this contact page</div>
-  )
+    <main className="w-screen h-screen bg-[#212121] pt-[65px]">contact</main>
+  );
 }

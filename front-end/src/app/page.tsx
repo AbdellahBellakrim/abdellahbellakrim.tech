@@ -11,6 +11,7 @@ import "swiper/css/bundle";
 import { Autoplay } from "swiper/modules";
 import ProjectCard from "@/components/ProjectCard";
 import { Button } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 const PoppinsFont = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -33,6 +34,7 @@ export default function LadingPage() {
     setSkills(skills);
     setProject(projects);
   }, [skills, projects]);
+  const router = useRouter();
 
   return (
     <main
@@ -248,7 +250,15 @@ export default function LadingPage() {
           <div className="text-white text-[36px] font-semibold text-center">
             Have any project in mind ?
           </div>
-          <Button className="bg-[#0070F0] rounded-xl">Contact me</Button>
+          <Button
+            className="bg-[#0070F0] rounded-xl"
+            onClick={(e) => {
+              e.preventDefault();
+              router.push("/contact");
+            }}
+          >
+            Contact me
+          </Button>
         </div>
       </section>
       <footer className="w-full h-[156px] bg-[#292C36]"></footer>
