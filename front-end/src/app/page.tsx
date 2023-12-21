@@ -269,7 +269,7 @@ export default function LadingPage() {
           </div>
         </div>
 
-        <div className="w-full lg:max-w-[980px] h-[277px] text-center flex justify-center items-center bg-[#292C36] rounded-xl flex-col gap-6 p-4 z-[2] shadow-xl">
+        <div className="w-full lg:max-w-[980px] h-[277px] text-center flex justify-center items-center bg-[#292C36] rounded-xl flex-col gap-6 p-4 z-[2] shadow-xl  border border-divider">
           <div className="text-white text-[36px] font-semibold text-center">
             Have any project in mind ?
           </div>
