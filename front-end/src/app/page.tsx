@@ -38,7 +38,7 @@ export default function LadingPage() {
 
   return (
     <main
-      className={`h-full w-full flex flex-col bg-[#212121] ${PoppinsFont.className}`}
+      className={`h-full w-full flex flex-col  items-center ${PoppinsFont.className}`}
     >
       <section
         id="Home"
@@ -130,9 +130,12 @@ export default function LadingPage() {
       </section>
       <section
         id="About"
-        className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-14"
+        className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-14 relative overflow-hidden"
       >
-        <div className=" w-full lg:max-w-[1440px] flex flex-col lg:flex-row-reverse gap-8 h-fit">
+        <div className="top-26 right-28 w-[50vh] h-[50vh] bg-[#5b21b6] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
+        <div className="top-36 right-40 w-[50vh] h-[50vh] bg-[#1d4ed8] rounded-full absolute filter blur-3xl mix-blend-multiplay opacity-20"></div>
+
+        <div className=" w-full lg:max-w-[1440px] flex flex-col lg:flex-row-reverse gap-8 h-fit z-[2]">
           <div className="w-full lg:w-[50%]">
             <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
               ABOUT ME
@@ -184,33 +187,39 @@ export default function LadingPage() {
           </div>
         </div>
 
-        <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit">
-          <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
-            what I do
-          </h2>
-          <h1 className="text-white text-[36px] font-semibold text-center ">
-            SPECIALIZING IN
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-6 mt-4 min-h-[210px]">
-            {skill.map((map: any) => {
-              return (
-                <SkillsCard
-                  header={map.header}
-                  banner={map.banner}
-                  content={map.content}
-                  id={map.id}
-                  key={map.id}
-                ></SkillsCard>
-              );
-            })}
+        <div className="h-fit min-w-[100vw] bg-black flex justify-center items-center p-8 z-[2]">
+          <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit ">
+            <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
+              what I do
+            </h2>
+            <h1 className="text-white text-[36px] font-semibold text-center ">
+              SPECIALIZING IN
+            </h1>
+            <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-6 mt-4 min-h-[210px]">
+              {skill.map((map: any) => {
+                return (
+                  <SkillsCard
+                    header={map.header}
+                    banner={map.banner}
+                    content={map.content}
+                    id={map.id}
+                    key={map.id}
+                  ></SkillsCard>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
       <section
         id="Work"
-        className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-14"
+        className="w-full  lg:max-w-[1440px] flex flex-col sm:p-[41px] p-[24px] items-center gap-14 relative overflow-y-clip"
       >
-        <div className="w-full h-full tex-center flex justify-center items-center flex-col gap-8">
+        <div className="top-26 right-28 w-[50vh] h-[50vh] bg-[#5b21b6] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
+        <div className="top-36 right-40 w-[50vh] h-[50vh] bg-[#1d4ed8] rounded-full absolute filter blur-3xl mix-blend-multiplay opacity-20"></div>
+        <div className="bottom-8 left-36 w-[50vh] h-[50vh] bg-[#5b21b6] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
+        <div className="bottom-0 left-0 w-[50vh] h-[50vh] bg-[#1d4ed8] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
+        <div className="w-full h-full tex-center flex justify-center items-center flex-col gap-8 z-[2]">
           <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit ">
             <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
               PORTFOLIO
@@ -219,11 +228,11 @@ export default function LadingPage() {
               LATEST PROJECTS
             </h1>
           </div>
-          <Swiper
+          {/* <Swiper
             breakpoints={breakpoints}
             spaceBetween={30}
             autoplay={{
-              delay: 500,
+              delay: 2000,
               disableOnInteraction: false,
             }}
             speed={2000}
@@ -244,9 +253,23 @@ export default function LadingPage() {
                 </SwiperSlide>
               );
             })}
-          </Swiper>
+          </Swiper> */}
+          <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-3 gap-8 mt-4 min-h-[210px]">
+            {project.map((map: any) => {
+              return (
+                <ProjectCard
+                  id={map.id}
+                  header={map.header}
+                  banner={map.banner}
+                  link={map.link}
+                  key={map.id}
+                ></ProjectCard>
+              );
+            })}
+          </div>
         </div>
-        <div className="w-full lg:max-w-[980px] h-[277px] tex-center flex justify-center items-center bg-[#292C36] rounded-xl flex-col gap-6 p-4">
+
+        <div className="w-full lg:max-w-[980px] h-[277px] text-center flex justify-center items-center bg-[#292C36] rounded-xl flex-col gap-6 p-4 z-[2] shadow-xl">
           <div className="text-white text-[36px] font-semibold text-center">
             Have any project in mind ?
           </div>

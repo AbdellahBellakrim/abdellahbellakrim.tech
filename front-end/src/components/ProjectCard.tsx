@@ -11,7 +11,7 @@ import { project } from "@/lib/data";
 
 export default function ProjectCard(props: project) {
   return (
-    <Card className="w-full max-w-[400px] bg-[#292C36]  m-0 shadow-none text-[#B0ADAD]  h-[400px]">
+    <Card className="w-full max-w-[400px] bg-[#292C36]  m-0  text-[#B0ADAD]  h-[400px]">
       <CardHeader className="flex gap-3 h-[70%] w-full p-0 m-0 overflow-hidden rounded-none">
         <div
           className="w-full h-full p-0 m-0"

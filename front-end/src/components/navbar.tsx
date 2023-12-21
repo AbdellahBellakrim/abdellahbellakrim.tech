@@ -21,7 +21,7 @@ export default function NavBar() {
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       isBordered
-      className="h-[65px] fixed"
+      className="h-[65px] fixed bg-[#292C36]"
     >
       <NavbarContent>
         <NavbarMenuToggle
