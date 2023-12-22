@@ -187,7 +187,7 @@ export default function LadingPage() {
           </div>
         </div>
 
-        <div className="h-fit min-w-[100vw] bg-black flex justify-center items-center p-8 z-[2]">
+        <div className="h-fit min-w-[100vw] bg-[#292C36] flex justify-center items-center p-12 z-[2]">
           <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit ">
             <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
               what I do
@@ -274,7 +274,7 @@ export default function LadingPage() {
             Have any project in mind ?
           </div>
           <Button
-            className="bg-[#0070F0] rounded-xl"
+            className="bg-[#0070F0] rounded-xl font-semibold"
             onClick={(e) => {
               e.preventDefault();
               router.push("/contact");
