@@ -29,6 +29,10 @@ const breakpoints = {
 export default function LadingPage() {
   const [skill, setSkills]: any = useState([]);
   const [project, setProject]: any = useState([]);
+  const [showAll, setShowAll] = useState(false);
+  const displayedProjects = showAll
+    ? project.slice().reverse()
+    : project.slice().reverse().slice(0, 3);
 
   useEffect(() => {
     setSkills(skills);
@@ -107,33 +111,13 @@ export default function LadingPage() {
             <img src="githubicon.svg" alt="githubicon.svg" />
           </Link>
         </motion.div>
-        {/* <svg
-          className="absolute bottom-[-5px] z-[-1]"
-          id="wave"
-          style={{ transform: "rotate(0deg)", transition: "0.3s" }}
-          viewBox="0 0 1440 100"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="rgba(58, 58, 58, 1)" offset="0%"></stop>
-              <stop stop-color="rgba(58, 58, 58, 1)" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <path
-            style={{ transform: "translate(0, 0px)", opacity: "1" }}
-            fill="url(#sw-gradient-0)"
-            d="M0,50L120,56.7C240,63,480,77,720,73.3C960,70,1200,50,1440,46.7C1680,43,1920,57,2160,58.3C2400,60,2640,50,2880,50C3120,50,3360,60,3600,68.3C3840,77,4080,83,4320,76.7C4560,70,4800,50,5040,45C5280,40,5520,50,5760,48.3C6000,47,6240,33,6480,25C6720,17,6960,13,7200,23.3C7440,33,7680,57,7920,66.7C8160,77,8400,73,8640,68.3C8880,63,9120,57,9360,48.3C9600,40,9840,30,10080,36.7C10320,43,10560,67,10800,75C11040,83,11280,77,11520,75C11760,73,12000,77,12240,71.7C12480,67,12720,53,12960,40C13200,27,13440,13,13680,11.7C13920,10,14160,20,14400,26.7C14640,33,14880,37,15120,36.7C15360,37,15600,33,15840,38.3C16080,43,16320,57,16560,66.7C16800,77,17040,83,17160,86.7L17280,90L17280,100L17160,100C17040,100,16800,100,16560,100C16320,100,16080,100,15840,100C15600,100,15360,100,15120,100C14880,100,14640,100,14400,100C14160,100,13920,100,13680,100C13440,100,13200,100,12960,100C12720,100,12480,100,12240,100C12000,100,11760,100,11520,100C11280,100,11040,100,10800,100C10560,100,10320,100,10080,100C9840,100,9600,100,9360,100C9120,100,8880,100,8640,100C8400,100,8160,100,7920,100C7680,100,7440,100,7200,100C6960,100,6720,100,6480,100C6240,100,6000,100,5760,100C5520,100,5280,100,5040,100C4800,100,4560,100,4320,100C4080,100,3840,100,3600,100C3360,100,3120,100,2880,100C2640,100,2400,100,2160,100C1920,100,1680,100,1440,100C1200,100,960,100,720,100C480,100,240,100,120,100L0,100Z"
-          ></path>
-        </svg> */}
       </section>
       <section
         id="About"
         className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-14 relative overflow-hidden"
       >
-        <div className="top-26 right-28 w-[50vh] h-[50vh] bg-[#5b21b6] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
-        <div className="top-36 right-40 w-[50vh] h-[50vh] bg-[#1d4ed8] rounded-full absolute filter blur-3xl mix-blend-multiplay opacity-20"></div>
+        {/* <div className="top-26 right-28 w-[50vh] h-[50vh] bg-[#5b21b6] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
+        <div className="top-36 right-40 w-[50vh] h-[50vh] bg-[#1d4ed8] rounded-full absolute filter blur-3xl mix-blend-multiplay opacity-20"></div> */}
 
         <div className=" w-full lg:max-w-[1440px] flex flex-col lg:flex-row-reverse gap-8 h-fit z-[2]">
           <div className="w-full lg:w-[50%]">
@@ -179,15 +163,15 @@ export default function LadingPage() {
                 <img
                   src="goat.jpg"
                   alt="goat.jpg"
-                  className="object-cover w-full h-full rounded-tl-2xl rounded-br-2xl z-[1]"
+                  className="object-cover w-full h-full rounded-tl-2xl rounded-br-2xl z-[1] border-2 border-divider"
                 />
-                <div className="border-[2px] border-white bg-transparent w-full h-full  rounded-tl-2xl rounded-br-2xl z-[-1]  p-3 m-3  absolute left-[2px] top-[2px]"></div>
+                <div className="border-2 border-divider bg-transparent w-full h-full  rounded-tl-2xl rounded-br-2xl z-[-1]  p-3 m-3  absolute left-[2px] top-[2px]"></div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="h-fit min-w-[100vw] bg-[#292C36] flex justify-center items-center p-12 z-[2]">
+        <div className="h-fit min-w-[100vw] bg-[#292C36] flex justify-center items-center p-12 z-[2] border border-divider">
           <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit ">
             <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
               what I do
@@ -215,10 +199,10 @@ export default function LadingPage() {
         id="Work"
         className="w-full  lg:max-w-[1440px] flex flex-col sm:p-[41px] p-[24px] items-center gap-14 relative overflow-y-clip"
       >
-        <div className="top-26 right-28 w-[50vh] h-[50vh] bg-[#5b21b6] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
+        {/* <div className="top-26 right-28 w-[50vh] h-[50vh] bg-[#5b21b6] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
         <div className="top-36 right-40 w-[50vh] h-[50vh] bg-[#1d4ed8] rounded-full absolute filter blur-3xl mix-blend-multiplay opacity-20"></div>
         <div className="bottom-8 left-36 w-[50vh] h-[50vh] bg-[#5b21b6] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
-        <div className="bottom-0 left-0 w-[50vh] h-[50vh] bg-[#1d4ed8] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
+        <div className="bottom-0 left-0 w-[50vh] h-[50vh] bg-[#1d4ed8] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div> */}
         <div className="w-full h-full tex-center flex justify-center items-center flex-col gap-8 z-[2]">
           <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit ">
             <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
@@ -228,45 +212,28 @@ export default function LadingPage() {
               LATEST PROJECTS
             </h1>
           </div>
-          {/* <Swiper
-            breakpoints={breakpoints}
-            spaceBetween={30}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            speed={2000}
-            loop={true}
-            modules={[Autoplay]}
-            className="w-[100%] 2xl:w-[70%] max-w-[1440px]"
-          >
-            {project.map((map: any) => {
-              return (
-                <SwiperSlide key={map.id}>
-                  <ProjectCard
-                    id={map.id}
-                    header={map.header}
-                    banner={map.banner}
-                    link={map.link}
-                    key={map.id}
-                  ></ProjectCard>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper> */}
-          <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-3 gap-8 mt-4 min-h-[210px]">
-            {project.map((map: any) => {
-              return (
-                <ProjectCard
-                  id={map.id}
-                  header={map.header}
-                  banner={map.banner}
-                  link={map.link}
-                  key={map.id}
-                ></ProjectCard>
-              );
-            })}
+          <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-3 gap-8 mt-4 min-h-[210px] w-full lg:max-w-[1440px]">
+            {displayedProjects.map((project: any) => (
+              <ProjectCard
+                id={project.id}
+                header={project.header}
+                banner={project.banner}
+                link={project.link}
+                key={project.id}
+              ></ProjectCard>
+            ))}
           </div>
+          {!showAll && (
+            <Button
+              className="bg-[#0070F0] rounded-xl font-semibold px-8"
+              onClick={(e) => {
+                e.preventDefault();
+                setShowAll(true);
+              }}
+            >
+              Show all
+            </Button>
+          )}
         </div>
 
         <div className="w-full lg:max-w-[980px] h-[277px] text-center flex justify-center items-center bg-[#292C36] rounded-xl flex-col gap-6 p-4 z-[2] shadow-xl  border border-divider">
@@ -274,7 +241,7 @@ export default function LadingPage() {
             Have any project in mind ?
           </div>
           <Button
-            className="bg-[#0070F0] rounded-xl font-semibold"
+            className="bg-[#0070F0] rounded-xl font-semibold  px-8"
             onClick={(e) => {
               e.preventDefault();
               router.push("/contact");
