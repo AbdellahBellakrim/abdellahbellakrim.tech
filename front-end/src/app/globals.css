@@ -11,8 +11,8 @@
 section::before {
   content: "";
   display: block;
-  height: 65px; /* Replace [NavbarHeight] with the height of your navbar */
-  margin-top: -65px; /* Same value as above, but negative */
+  height: 65px;
+  margin-top: -65px;
   visibility: hidden;
   pointer-events: none;
 }
