@@ -1,7 +1,7 @@
 "use client";
 
 import SkillsCard from "@/components/SkillsCard";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -180,15 +180,26 @@ export default function LadingPage() {
               SPECIALIZING IN
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-6 mt-4 min-h-[210px]">
-              {skill.map((map: any) => {
+              {skill.map((map: any, index: number) => {
                 return (
-                  <SkillsCard
-                    header={map.header}
-                    banner={map.banner}
-                    content={map.content}
-                    id={map.id}
-                    key={map.id}
-                  ></SkillsCard>
+                  <motion.div
+                    className="w-fit h-fit"
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: { delay: 0.3 * index },
+                    }}
+                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 100 }}
+                  >
+                    <SkillsCard
+                      header={map.header}
+                      banner={map.banner}
+                      content={map.content}
+                      id={map.id}
+                      key={map.id}
+                    ></SkillsCard>
+                  </motion.div>
                 );
               })}
             </div>

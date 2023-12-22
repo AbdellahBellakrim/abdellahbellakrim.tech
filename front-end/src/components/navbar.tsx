@@ -11,11 +11,14 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = ["Home", "About", "Work", "Contact"];
+
+  const router = useRouter();
 
   return (
     <Navbar
@@ -28,7 +31,11 @@ export default function NavBar() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
+
+        <NavbarBrand
+          className="hover:cursor-pointer hover:opacity-80"
+          onClick={() => router.push("/")}
+        >
           <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
             <path
               clipRule="evenodd"
