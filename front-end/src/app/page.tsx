@@ -55,10 +55,10 @@ export default function LadingPage() {
         }}
       >
         <motion.h1
-          initial={{ opacity: 0.6, scale: 1.3 }}
+          initial={{ opacity: 0, scale: 1.3 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 1,
+            duration: 0.8,
           }}
           className={`${PoppinsFont.className} font-semibold text-[3.8em] md:text[4.8em] lg:text-[5em] text-center bg-clip-text text-transparent bg-[linear-gradient(to_left,theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.amber.600),theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.blue.600),theme(colors.indigo.100),theme(colors.indigo.100))] bg-[length:200%_auto] animate-gradient`}
         >
@@ -68,7 +68,7 @@ export default function LadingPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            duration: 1,
+            duration: 0.8,
           }}
           className={`${PoppinsFont.className} font-semibold text-[1.4em] md:text[1.8em] lg:text-[2em] text-center`}
         >
@@ -78,7 +78,7 @@ export default function LadingPage() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 1.5,
+            duration: 1.8,
           }}
           className="grid grid-cols-2 md:grid-cols-4 gap-10 w-1/8 col-auto"
         >
@@ -210,10 +210,6 @@ export default function LadingPage() {
         id="Work"
         className="w-full  lg:max-w-[1440px] flex flex-col sm:p-[41px] p-[24px] items-center gap-14 relative overflow-y-clip"
       >
-        {/* <div className="top-26 right-28 w-[50vh] h-[50vh] bg-[#5b21b6] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
-        <div className="top-36 right-40 w-[50vh] h-[50vh] bg-[#1d4ed8] rounded-full absolute filter blur-3xl mix-blend-multiplay opacity-20"></div>
-        <div className="bottom-8 left-36 w-[50vh] h-[50vh] bg-[#5b21b6] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
-        <div className="bottom-0 left-0 w-[50vh] h-[50vh] bg-[#1d4ed8] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div> */}
         <div className="w-full h-full tex-center flex justify-center items-center flex-col gap-8 z-[2]">
           <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit ">
             <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
@@ -231,6 +227,7 @@ export default function LadingPage() {
                 banner={project.banner}
                 link={project.link}
                 key={project.id}
+                tech={project.tech}
               ></ProjectCard>
             ))}
           </div>
@@ -265,3 +262,4 @@ export default function LadingPage() {
     </main>
   );
 }
+// TODO: add scrolling animation , try to add shadowing for project section and making it more cool and animated, add contact section
