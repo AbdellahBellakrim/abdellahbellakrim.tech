@@ -59,7 +59,7 @@ export const projects: project[] = [
   },
   {
     id: "003",
-    banner: "pushswap42.png",
+    banner: "pushswap42.gif",
     header: "PUSH SWAP 42",
     link: "https://github.com/AbdellahBellakrim/push_swap-42",
     tech: ["C", "Makefile", "algorithms"],
@@ -73,14 +73,14 @@ export const projects: project[] = [
   },
   {
     id: "005",
-    banner: "philosophers42.png",
+    banner: "philosophers42.gif",
     header: "PHILOSOPHERS 42",
     link: "https://github.com/AbdellahBellakrim/philosophers_42",
     tech: ["C", "Makefile", "algorithms"],
   },
   {
     id: "006",
-    banner: "cub3d.jpg",
+    banner: "cub3d.gif",
     header: "CUBE3D 42",
     link: "https://github.com/mmasstou/cub3d",
     tech: ["C", "Makefile", "Minilibx", "algorithms"],
@@ -94,7 +94,7 @@ export const projects: project[] = [
   },
   {
     id: "008",
-    banner: "inception.png",
+    banner: "inception.gif",
     header: "INCEPTION 42",
     link: "https://github.com/AbdellahBellakrim/inception_42",
     tech: [
@@ -111,7 +111,7 @@ export const projects: project[] = [
   },
   {
     id: "009",
-    banner: "pong.jpeg",
+    banner: "pong.gif",
     header: "FT_TRANSCENDENCE 42",
     link: "https://github.com/soufiane-amt/ft_transcendance",
     tech: [

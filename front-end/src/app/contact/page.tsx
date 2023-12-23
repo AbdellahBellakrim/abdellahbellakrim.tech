@@ -1,13 +1,17 @@
+"use client";
+import { sendMail } from "@/actions/sendEmail";
 import { Button, Input, Textarea } from "@nextui-org/react";
 
 export default function Home() {
   return (
     <main className="w-full h-[calc(100vh-65px)] p-[10px] pt-[65px] flex justify-center items-center">
       <form
-        // action={async (FormData) => {
-        //   console.log(FormData);
-        // }}
-        className="flex flex-col gap-6 w-full sm:w-1/2 "
+        className="flex flex-col gap-6 w-full sm:w-1/2 h-fit"
+        onSubmit={async (event: any) => {
+          event.preventDefault();
+          const formData = new FormData(event.target);
+          await sendMail(formData);
+        }}
       >
         <h2 className="text-[24px] font-semibold tracking-[2.4px]">
           Contact Me
@@ -22,20 +26,30 @@ export default function Home() {
           </a>{" "}
           or through this form.
         </p>
-        <Input
-          type="email"
-          label="Email"
-          placeholder="Enter your email"
-          className="max-w-[500px]"
-          required
-        />
-        <Textarea
-          required
-          label="Message"
-          placeholder="Enter your message"
-          className="max-w-[500px]"
-        />
-        <Button color="primary" variant="shadow" className="w-fit -mt-2">
+        <label htmlFor="email">
+          <Input
+            type="email"
+            label="Email"
+            placeholder="Enter your email"
+            className="max-w-[500px]"
+            isRequired
+            name="email"
+            id="email"
+            autoComplete="some-email"
+          />
+        </label>
+        <label htmlFor="message">
+          <Textarea
+            className="max-w-[500px]"
+            isRequired
+            size="lg"
+            label="Message"
+            placeholder="Enter your message"
+            name="message"
+            id="message"
+          />
+        </label>
+        <Button color="primary" className="w-fit -mt-2" type="submit">
           Submit
         </Button>
       </form>

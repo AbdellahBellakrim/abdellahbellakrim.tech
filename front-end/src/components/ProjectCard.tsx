@@ -13,10 +13,10 @@ import { motion } from "framer-motion";
 
 export default function ProjectCard(props: project) {
   return (
-    <Card className="w-full max-w-[480px] bg-[#292C36]    text-[#B0ADAD]  min-h-[400px] h-full   border border-divider m-auto">
+    <Card className="w-full max-w-[480px] bg-[#292C36]    text-[#B0ADAD]  min-h-[400px] h-full m-auto">
       <CardHeader className="flex gap-3 h-fit w-full p-0 m-0 overflow-hidden rounded-none">
         <motion.div
-          className="w-full h-[350px] p-0 m-0 relative overflow-hidden group"
+          className="w-full h-[250px] p-0 m-0 relative overflow-hidden group"
           initial={{ opacity: 0, scale: 1.5 }}
           whileInView={{
             opacity: 1,
@@ -28,7 +28,7 @@ export default function ProjectCard(props: project) {
           viewport={{ once: true }}
         >
           <div
-            className="w-full h-full transition-transform transform-gpu group-hover:scale-110"
+            className="w-full h-full"
             style={{
               backgroundImage: `url(${props.banner})`,
               backgroundPosition: "center",
@@ -45,8 +45,10 @@ export default function ProjectCard(props: project) {
             {props.header}
           </div>
           <div className="flex flex-wrap gap-4">
-            {props.tech.map((techno) => (
-              <Code color="primary">{techno}</Code>
+            {props.tech.map((techno, index) => (
+              <Code color="primary" key={index}>
+                {techno}
+              </Code>
             ))}
           </div>
         </div>

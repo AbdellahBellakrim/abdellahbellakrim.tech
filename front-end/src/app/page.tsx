@@ -116,9 +116,6 @@ export default function LadingPage() {
         id="About"
         className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-14 relative overflow-hidden"
       >
-        {/* <div className="top-26 right-28 w-[50vh] h-[50vh] bg-[#5b21b6] rounded-full absolute  filter blur-3xl mix-blend-multiplay opacity-20"></div>
-        <div className="top-36 right-40 w-[50vh] h-[50vh] bg-[#1d4ed8] rounded-full absolute filter blur-3xl mix-blend-multiplay opacity-20"></div> */}
-
         <div className=" w-full lg:max-w-[1440px] flex flex-col lg:flex-row-reverse gap-8 h-fit z-[2]">
           <div className="w-full lg:w-[50%]">
             <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
@@ -163,7 +160,7 @@ export default function LadingPage() {
                 <img
                   src="goat.jpg"
                   alt="goat.jpg"
-                  className="object-cover w-full h-full rounded-tl-2xl rounded-br-2xl z-[1] border-2 border-divider"
+                  className="object-cover w-full h-full rounded-tl-2xl rounded-br-2xl z-[1]"
                 />
                 <div className="border-2 border-divider bg-transparent w-full h-full  rounded-tl-2xl rounded-br-2xl z-[-1]  p-3 m-3  absolute left-[2px] top-[2px]"></div>
               </div>
@@ -171,7 +168,7 @@ export default function LadingPage() {
           </div>
         </div>
 
-        <div className="h-fit min-w-[100vw] bg-[#292C36] flex justify-center items-center p-12 z-[2] border border-divider">
+        <div className="h-fit min-w-[100vw] bg-[#292C36] flex justify-center items-center p-12 z-[2] ">
           <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit ">
             <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
               what I do
@@ -183,6 +180,7 @@ export default function LadingPage() {
               {skill.map((map: any, index: number) => {
                 return (
                   <motion.div
+                    key={map.id}
                     className="w-fit h-fit"
                     whileInView={{
                       opacity: 1,
@@ -197,7 +195,6 @@ export default function LadingPage() {
                       banner={map.banner}
                       content={map.content}
                       id={map.id}
-                      key={map.id}
                     ></SkillsCard>
                   </motion.div>
                 );
@@ -219,7 +216,7 @@ export default function LadingPage() {
               LATEST PROJECTS
             </h1>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-3 gap-8 mt-4 min-h-[210px] w-full lg:max-w-[1440px]">
+          <div className="grid grid-cols-1   xl:grid-cols-3 gap-8 mt-4 min-h-[210px] w-full lg:max-w-[1440px]">
             {displayedProjects.map((project: any) => (
               <ProjectCard
                 id={project.id}
@@ -233,7 +230,8 @@ export default function LadingPage() {
           </div>
           {!showAll && (
             <Button
-              className="bg-[#0070F0] rounded-xl font-semibold px-8"
+              color="primary"
+              className="rounded-xl font-semibold px-8"
               onClick={(e) => {
                 e.preventDefault();
                 setShowAll(true);
@@ -244,12 +242,13 @@ export default function LadingPage() {
           )}
         </div>
 
-        <div className="w-full lg:max-w-[980px] h-[277px] text-center flex justify-center items-center bg-[#292C36] rounded-xl flex-col gap-6 p-4 z-[2] shadow-xl  border border-divider">
+        <div className="w-full lg:max-w-[980px] h-[277px] text-center flex justify-center items-center bg-[#292C36] rounded-xl flex-col gap-6 p-4 z-[2] shadow-xl">
           <div className="text-white text-[36px] font-semibold text-center">
             Have any project in mind ?
           </div>
           <Button
-            className="bg-[#0070F0] rounded-xl font-semibold  px-8"
+            color="primary"
+            className="rounded-xl font-semibold  px-8"
             onClick={(e) => {
               e.preventDefault();
               router.push("/contact");
