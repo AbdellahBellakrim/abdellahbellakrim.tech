@@ -1,14 +1,11 @@
 "use client";
 
 import SkillsCard from "@/components/SkillsCard";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { skills, projects } from "@/lib/data";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/bundle";
-import { Autoplay } from "swiper/modules";
 import ProjectCard from "@/components/ProjectCard";
 import { Button } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
@@ -18,14 +15,6 @@ const PoppinsFont = Poppins({
   subsets: ["latin"],
 });
 
-const breakpoints = {
-  // Define breakpoints and the number of slides to show at each breakpoint
-  320: { slidesPerView: 1 },
-  480: { slidesPerView: 2 },
-  768: { slidesPerView: 2 },
-  1024: { slidesPerView: 3 },
-  // Add more breakpoints as needed
-};
 export default function LadingPage() {
   const [skill, setSkills]: any = useState([]);
   const [project, setProject]: any = useState([]);
@@ -91,21 +80,21 @@ export default function LadingPage() {
           </Link>
           <Link
             className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
-            href={"https://www.linkedin.com/in/abdellahbellakrim/"}
+            href={`${process.env.NEXT_PUBLIC_API_LINKEDIN}`}
             target="_blank"
           >
             <img src="linkendinicon.svg" alt="linkendinicon.svg" />
           </Link>
           <Link
             className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
-            href={"https://twitter.com/c0d3crush3r"}
+            href={`${process.env.NEXT_PUBLIC_API_TWITTER}`}
             target="_blank"
           >
             <img src="twittericon.svg" alt="twittericon.svg" />
           </Link>
           <Link
             className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
-            href={"https://github.com/AbdellahBellakrim"}
+            href={`${process.env.NEXT_PUBLIC_API_GITHUB}`}
             target="_blank"
           >
             <img src="githubicon.svg" alt="githubicon.svg" />
