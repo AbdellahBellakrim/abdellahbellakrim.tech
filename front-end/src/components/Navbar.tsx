@@ -23,7 +23,6 @@ export default function NavBar() {
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      isBordered
       className="h-[65px] fixed bg-[#292C36] bg-opacity-90"
     >
       <NavbarContent>
@@ -62,7 +61,7 @@ export default function NavBar() {
           </NavbarItem>
         ))}
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="bg-[#292C36] bg-opacity-90 font-semibold">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
