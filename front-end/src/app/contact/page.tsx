@@ -1,3 +1,4 @@
+"use client";
 import ContactComponent from "@/components/ContactComponent";
 import LocationComponent from "@/components/LocationComponent";
 import "react-toastify/dist/ReactToastify.css";

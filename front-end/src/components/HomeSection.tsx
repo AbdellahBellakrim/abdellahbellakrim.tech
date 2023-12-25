@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
-import { Poppins } from "next/font/google";
-import Link from "next/link";
 
-const PoppinsFont = Poppins({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});
+import Link from "next/link";
 
 function HomeSection() {
   return (
@@ -25,7 +20,7 @@ function HomeSection() {
         transition={{
           duration: 0.8,
         }}
-        className={`${PoppinsFont.className} font-semibold text-[3.8em] md:text[4.8em] lg:text-[5em] text-center bg-clip-text text-transparent bg-[linear-gradient(to_left,theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.amber.600),theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.blue.600),theme(colors.indigo.100),theme(colors.indigo.100))] bg-[length:200%_auto] animate-gradient`}
+        className={` font-semibold text-[3.8em] md:text[4.8em] lg:text-[5em] text-center bg-clip-text text-transparent bg-[linear-gradient(to_left,theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.amber.600),theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.blue.600),theme(colors.indigo.100),theme(colors.indigo.100))] bg-[length:200%_auto] animate-gradient`}
       >
         I’m Abdelah Bellakrim
       </motion.h1>
@@ -35,7 +30,7 @@ function HomeSection() {
         transition={{
           duration: 0.8,
         }}
-        className={`${PoppinsFont.className} font-semibold text-[1.4em] md:text[1.8em] lg:text-[2em] text-center`}
+        className={` font-semibold text-[1.4em] md:text[1.8em] lg:text-[2em] text-center`}
       >
         software engineer - web developer{" "}
       </motion.h3>
