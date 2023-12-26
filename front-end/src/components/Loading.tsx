@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import Lottie from "react-lottie-player";
-import LoadingAnimation from "../../public/LoadingCube.json";
+import LoadingAnimation from "../../public/LoadingMiniCube.json";
 function Loading() {
   return (
-    <div className="w-screen h-screen bg-[#212121] flex justify-center items-center overflow-hidden">
+    <div className="w-screen h-screen bg-[#212121] flex justify-center items-center overflow-hidden flex-col">
       <Lottie
         loop
         animationData={LoadingAnimation}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import HOC from "./providers";
 import { Poppins } from "next/font/google";
+import Providers from "./providers";
 const PoppinsFont = Poppins({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`bg-[#212121] ${PoppinsFont.className}`}>
-        <HOC>{children}</HOC>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

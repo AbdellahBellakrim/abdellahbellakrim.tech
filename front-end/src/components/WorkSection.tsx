@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
-import { projects } from "@/lib/data";
 import ProjectCard from "@/components/ProjectCard";
 import { Button } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
-
+import { globalContext } from "@/lib/data.context";
+import { useContext } from "react";
 function WorkSection() {
-  const [project, setProject]: any = useState([]);
+  const context: any = useContext(globalContext);
+  const project = context.project;
   const [showAll, setShowAll] = useState(false);
   const displayedProjects = showAll
     ? project.slice().reverse()
     : project.slice().reverse().slice(0, 3);
 
-  useEffect(() => {
-    setProject(projects);
-  }, [projects]);
   const router = useRouter();
   return (
     <section

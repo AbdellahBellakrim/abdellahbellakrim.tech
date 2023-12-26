@@ -10,7 +10,7 @@ function ContactComponent() {
   return (
     <form
       ref={form}
-      className="flex flex-col gap-6 w-full lg:w-auto h-fit"
+      className="flex flex-col gap-6 w-full lg:w-auto"
       onSubmit={(event: any) => {
         event.preventDefault();
         emailjs
@@ -50,7 +50,7 @@ function ContactComponent() {
       }}
     >
       <h2 className="text-[24px] font-semibold tracking-[2.4px]">Contact Me</h2>
-      <p className="-mt-6">
+      <p className="-mt-6 overflow-hidden">
         Please contact me directly at{" "}
         <a
           className="hover:cursor-pointer underline"

@@ -1,14 +1,12 @@
 import SkillsCard from "@/components/SkillsCard";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { skills } from "@/lib/data";
+import { globalContext } from "@/lib/data.context";
+import { useContext } from "react";
 
 function AboutSection() {
-  const [skill, setSkills]: any = useState([]);
+  const context: any = useContext(globalContext);
+  const skill = context.skill;
 
-  useEffect(() => {
-    setSkills(skills);
-  }, [skills]);
   return (
     <section
       id="About"
