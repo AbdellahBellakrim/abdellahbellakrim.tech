@@ -6,14 +6,14 @@ Welcome to the GitHub repository of my portfolio website, [abdellahbellakrim.tec
 
 This project is built using the following technologies:
 
+- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
 - Next.js: A React framework for building modern web applications.
-- Tailwind CSS: A utility-first CSS framework for rapidly building custom user interfaces.
 - NEXT UI: A collection of UI components for Next.js applications.
+- Tailwind CSS: A utility-first CSS framework for rapidly building custom user interfaces.
 - React Toastify: Allows you to add notifications to your app with ease.
 - React Lottie Player: For rendering animations in Lottie format.
 - Framer Motion: A production-ready motion library for React.
-- @emailjs/browser: To send emails directly from the browser.
-- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
+- Emailjs/browser: To send emails directly from the browser.
 
 ## Getting Started
 
