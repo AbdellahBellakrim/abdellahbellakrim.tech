@@ -29,10 +29,12 @@ const HOC = (WrappedComponent: any) => {
       getData();
     }, [loadingData]);
 
-    return (
+    return loadingData ? (
+      <Loading />
+    ) : (
       <globalContext.Provider value={{ skill, setSkill, project, setProject }}>
         <NavBar />
-        {loadingData ? <Loading /> : <WrappedComponent {...props} />}
+        <WrappedComponent {...props} />
         <Footer />
       </globalContext.Provider>
     );
