@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import Providers from "./providers";
+import UIProvider from "./providers";
 const PoppinsFont = Poppins({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`bg-[#212121] ${PoppinsFont.className}`}>
-        <Providers>{children}</Providers>
+        <UIProvider>{children}</UIProvider>
       </body>
     </html>
   );

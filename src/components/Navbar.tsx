@@ -52,9 +52,13 @@ export default function NavBar() {
           <NavbarItem key={`${item}-${index}`}>
             <Link
               color="foreground"
-              className="w-full font-semibold"
-              href={item === "Contact" ? `/contact` : `/#${item}`}
+              className="w-full font-semibold hover:cursor-pointer"
               size="lg"
+              onClick={() => {
+                item === "Contact"
+                  ? router.push("contact")
+                  : router.push(`/#${item}`);
+              }}
             >
               {item}
             </Link>
@@ -72,8 +76,12 @@ export default function NavBar() {
                   ? "danger"
                   : "foreground"
               }
-              className="w-full"
-              href={item === "Contact" ? `/contact` : `/#${item}`}
+              className="w-full  hover:cursor-pointer"
+              onClick={() => {
+                item === "Contact"
+                  ? router.push("contact")
+                  : router.push(`/#${item}`);
+              }}
               size="lg"
             >
               {item}
