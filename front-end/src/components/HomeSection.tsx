@@ -18,7 +18,7 @@ function HomeSection() {
         initial={{ opacity: 0, scale: 1.3 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
-          duration: 1,
+          duration: 1.5,
         }}
         className={` font-semibold text-[3.8em] md:text[4.8em] lg:text-[5em] text-center bg-clip-text text-transparent bg-[linear-gradient(to_left,theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.amber.600),theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.blue.600),theme(colors.indigo.100),theme(colors.indigo.100))] bg-[length:200%_auto] animate-gradient`}
       >
@@ -28,7 +28,7 @@ function HomeSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
-          duration: 1,
+          duration: 1.5,
         }}
         className={` font-semibold text-[1.4em] md:text[1.8em] lg:text-[2em] text-center`}
       >
@@ -38,7 +38,7 @@ function HomeSection() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
-          duration: 2,
+          duration: 2.5,
         }}
         className="grid grid-cols-2 md:grid-cols-4 gap-10 w-1/8 col-auto"
       >
