@@ -1,6 +1,6 @@
 # Abdellah Bellakrim's Portfolio
 
-Welcome to the GitHub repository of my portfolio website, [abdellahbellakrim.tech]. This portfolio showcases my work and provides a way for people to get in touch with me.
+Welcome to the GitHub repository of my portfolio website, [abdellahbellakrim.tech](https://abdellahbellakrim.tech). This portfolio showcases my work and provides a way for people to get in touch with me.
 
 ## Technologies Used
 
@@ -19,7 +19,7 @@ This project is built using the following technologies:
 
 To get a local copy up and running, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/your-repo-name.git`
+1. Clone the repository: `git clone git@github.com:AbdellahBellakrim/abdellahbellakrim.tech.git`
 2. Install the dependencies: `npm install`
 3. Start the development server: `npm run dev`
 
