@@ -43,35 +43,35 @@ function HomeSection() {
         }}
         className="grid grid-cols-2 md:grid-cols-4 gap-10 w-1/8 col-auto"
       >
-        <Link
+        <a
           className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
-          href={"/CV.pdf"}
+          href={"/AbdellahBELLAKRIMCVResume.pdf"}
           target="_blank"
           download
         >
           <img src="cvicon.svg" alt="cvicon.svg" />
-        </Link>
-        <Link
+        </a>
+        <a
           className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
           href={`${process.env.NEXT_PUBLIC_API_LINKEDIN}`}
           target="_blank"
         >
           <img src="linkendinicon.svg" alt="linkendinicon.svg" />
-        </Link>
-        <Link
+        </a>
+        <a
           className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
           href={`${process.env.NEXT_PUBLIC_API_TWITTER}`}
           target="_blank"
         >
           <img src="twittericon.svg" alt="twittericon.svg" />
-        </Link>
-        <Link
+        </a>
+        <a
           className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
           href={`${process.env.NEXT_PUBLIC_API_GITHUB}`}
           target="_blank"
         >
           <img src="githubicon.svg" alt="githubicon.svg" />
-        </Link>
+        </a>
       </motion.div>
     </section>
   );
