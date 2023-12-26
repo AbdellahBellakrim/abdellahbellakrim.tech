@@ -45,7 +45,7 @@ function HomeSection() {
       >
         <Link
           className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
-          href={"/Abdellah BELLAKRIM CV Resume.pdf"}
+          href={"/AbdellahBELLAKRIMCVResume.pdf"}
           target="_blank"
           download
         >
