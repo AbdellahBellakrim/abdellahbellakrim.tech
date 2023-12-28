@@ -69,6 +69,7 @@ function ContactComponent() {
           isRequired
           name="user_name"
           id="name"
+          variant="bordered"
           autoComplete="some-name"
         />
       </label>
@@ -82,6 +83,7 @@ function ContactComponent() {
           name="user_email"
           id="email"
           autoComplete="some-email"
+          variant="bordered"
         />
       </label>
       <label htmlFor="message">
@@ -93,6 +95,7 @@ function ContactComponent() {
           placeholder="Enter your message"
           name="message"
           id="message"
+          variant="bordered"
         />
       </label>
       <Button color="primary" className="w-fit -mt-2" type="submit">

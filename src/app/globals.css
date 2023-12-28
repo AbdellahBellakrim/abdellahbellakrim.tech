@@ -8,7 +8,7 @@
   padding: 0;
 }
 
-section::before {
+.section::before {
   content: "";
   display: block;
   height: 65px;

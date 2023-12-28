@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 export default function ProjectCard(props: project) {
   return (
-    <Card className="w-full max-w-[480px] bg-[#292C36]    text-[#B0ADAD]  min-h-[400px] h-full m-auto">
+    <Card className="w-full max-w-[480px] text-[#B0ADAD]  min-h-[400px] h-full m-auto border border-divider bg-[#292C36] bg-opacity-70">
       <CardHeader className="flex gap-3 h-fit w-full p-0 m-0 overflow-hidden rounded-none">
         <motion.div
           className="w-full h-[250px] p-0 m-0 relative overflow-hidden group"
@@ -23,7 +23,7 @@ export default function ProjectCard(props: project) {
             scale: 1,
           }}
           transition={{
-            duration: 1.8,
+            duration: 3,
           }}
           viewport={{ once: true }}
         >

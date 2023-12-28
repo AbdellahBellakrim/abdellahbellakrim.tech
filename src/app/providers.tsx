@@ -21,7 +21,7 @@ const HOC = (WrappedComponent: any) => {
         try {
           setSkill(skills);
           setProject(projects);
-          setTimeout(() => setLoadingData(false), 2000);
+          setTimeout(() => setLoadingData(false), 3000);
         } catch (error) {
           console.clear();
         }

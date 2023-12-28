@@ -1,27 +1,28 @@
 "use client";
 import { motion } from "framer-motion";
 
-import Link from "next/link";
-
 function HomeSection() {
   return (
     <section
       id="Home"
-      className="min-h-screen w-full flex justify-center items-center  flex-col p-[10px] gap-6 relative z-[1] overflow-x-hidden"
-      style={{
-        backgroundImage: 'url("bg-image2.png")',
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="min-h-screen min-w-full flex justify-center items-center  flex-col px-[10] py-[50px] gap-6 relative z-[1] overflow-x-hidden border-b border-divider mt-[65px]"
     >
-      <motion.h1
-        initial={{ opacity: 0, scale: 1.3 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 1.5,
+      <div
+        className="absolute w-full h-full z-[-1]"
+        style={{
+          backgroundImage: 'url("bglive.gif")',
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
-        className={` font-semibold text-[3.8em] md:text[4.8em] lg:text-[5em] text-center bg-clip-text text-transparent bg-[linear-gradient(to_left,theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.amber.600),theme(colors.indigo.100),theme(colors.indigo.100),theme(colors.blue.600),theme(colors.indigo.100),theme(colors.indigo.100))] bg-[length:200%_auto] animate-gradient`}
+      ></div>
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 2,
+        }}
+        className={` font-semibold text-[3.4em] md:text[4.8em] lg:text-[5em] text-center text-white`}
       >
         I’m Abdelah Bellakrim
       </motion.h1>
@@ -29,17 +30,17 @@ function HomeSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
-          duration: 1.5,
+          duration: 2,
         }}
         className={` font-semibold text-[1.4em] md:text[1.8em] lg:text-[2em] text-center`}
       >
         software engineer - web developer{" "}
       </motion.h3>
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{
-          duration: 2.5,
+          duration: 3.5,
         }}
         className="grid grid-cols-2 md:grid-cols-4 gap-10 w-1/8 col-auto"
       >

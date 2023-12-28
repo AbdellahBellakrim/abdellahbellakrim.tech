@@ -10,7 +10,7 @@ function AboutSection() {
   return (
     <section
       id="About"
-      className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-14 relative overflow-hidden"
+      className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-20 relative overflow-hidden bg-black bg-opacity-70 section"
     >
       <div className=" w-full lg:max-w-[1440px] flex flex-col lg:flex-row-reverse gap-8 h-fit z-[2]">
         <div className="w-full lg:w-[50%]">
@@ -52,19 +52,19 @@ function AboutSection() {
 
         <div className="lg:w-[50%] flex justify-center items-center">
           <div className="h-full w-full  z-[1] flex items-center justify-center">
-            <div className="w-[80%] max-w-[390px] lg:min-w-[390px] p-[2px] relative z-[1]">
+            <div className="w-[80%] max-w-[450px] lg:min-w-[450px] p-[2px] relative z-[1] bg-divider rounded-tl-2xl rounded-br-2xl">
               <img
                 src="goat.jpg"
                 alt="goat.jpg"
                 className="object-cover w-full h-full rounded-tl-2xl rounded-br-2xl z-[1]"
               />
-              <div className="border-2 border-divider bg-transparent w-full h-full  rounded-tl-2xl rounded-br-2xl z-[-1]  p-3 m-3  absolute left-[2px] top-[2px]"></div>
+              {/* <div className=" border-2 border-white bg-transparent w-full h-full  rounded-tl-2xl rounded-br-2xl z-[-1]  p-3 m-3  absolute left-[2px] top-[2px]"></div> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="h-fit min-w-[100vw] bg-[#292C36] flex justify-center items-center p-12 z-[2] ">
+      <div className="h-fit min-w-[100vw] flex justify-center items-center p-12 z-[2] bg-[#292C36] bg-opacity-70">
         <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit ">
           <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
             what I do
@@ -81,7 +81,7 @@ function AboutSection() {
                   whileInView={{
                     opacity: 1,
                     y: 0,
-                    transition: { delay: 0.3 * index },
+                    transition: { delay: 0.4 * index },
                   }}
                   viewport={{ once: true }}
                   initial={{ opacity: 0, y: 100 }}
