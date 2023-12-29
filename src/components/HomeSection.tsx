@@ -5,7 +5,7 @@ function HomeSection() {
   return (
     <section
       id="Home"
-      className="min-h-screen min-w-full flex justify-center items-center  flex-col px-[10] py-[50px] gap-6 relative z-[1] overflow-x-hidden border-b border-divider mt-[65px]"
+      className="min-h-screen min-w-full flex items-center justify-center  flex-col p-[24px] pt-[65px] gap-6 relative z-[1] overflow-hidden border-b border-divider"
     >
       <div
         className="absolute w-full h-full z-[-1]"
