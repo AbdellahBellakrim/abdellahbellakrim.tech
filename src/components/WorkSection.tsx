@@ -16,7 +16,7 @@ function WorkSection() {
   return (
     <section
       id="Work"
-      className="w-full h-fit flex items-center justify-center bg-black bg-opacity-70"
+      className="w-full h-fit flex items-center justify-center"
     >
       <div className="w-full  lg:max-w-[1440px] flex flex-col sm:p-[41px] p-[24px] items-center gap-20 relative section">
         <div className="w-full h-full tex-center flex justify-center items-center flex-col gap-8 z-[2]">

@@ -5,24 +5,15 @@ function HomeSection() {
   return (
     <section
       id="Home"
-      className="min-h-screen min-w-full flex items-center justify-center  flex-col p-[24px] pt-[65px] gap-6 relative z-[1] overflow-hidden border-b border-divider"
+      className="min-h-screen min-w-full flex items-center justify-center  flex-col p-[24px] pt-[65px] gap-6 relative z-[1] overflow-hidden"
     >
-      <div
-        className="absolute w-full h-full z-[-1]"
-        style={{
-          backgroundImage: 'url("bglive.gif")',
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      ></div>
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
           duration: 2,
         }}
-        className={` font-semibold text-[3.4em] md:text[4.8em] lg:text-[5em] text-center text-white`}
+        className={` font-semibold text-[3.4em] md:text[4.8em] lg:text-[5em] text-center text-white `}
       >
         I’m Abdelah Bellakrim
       </motion.h1>

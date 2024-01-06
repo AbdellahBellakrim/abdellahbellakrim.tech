@@ -10,7 +10,7 @@ function AboutSection() {
   return (
     <section
       id="About"
-      className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-20 relative overflow-hidden bg-black bg-opacity-70 section"
+      className="w-full flex flex-col sm:p-[41px] p-[24px] items-center gap-20 relative overflow-hidden section"
     >
       <div className=" w-full lg:max-w-[1440px] flex flex-col lg:flex-row-reverse gap-8 h-fit z-[2]">
         <div className="w-full lg:w-[50%]">

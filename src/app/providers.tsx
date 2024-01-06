@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { globalContext } from "@/lib/data.context";
 import { skills, projects } from "@/lib/data";
-import Loading from "@/components/Loading";
 import { NextUIProvider } from "@nextui-org/react";
 import NavBar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -21,7 +20,7 @@ const HOC = (WrappedComponent: any) => {
         try {
           setSkill(skills);
           setProject(projects);
-          setTimeout(() => setLoadingData(false), 3000);
+          setLoadingData(false);
         } catch (error) {
           console.clear();
         }
@@ -29,9 +28,7 @@ const HOC = (WrappedComponent: any) => {
       getData();
     }, [loadingData]);
 
-    return loadingData ? (
-      <Loading />
-    ) : (
+    return (
       <globalContext.Provider value={{ skill, setSkill, project, setProject }}>
         <NavBar />
         <WrappedComponent {...props} />
