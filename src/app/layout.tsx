@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`bg-[#212121] ${PoppinsFont.className}`}
         style={{
-          backgroundImage: 'url("in.jpg")',
+          backgroundImage: 'url("in3.jpg")',
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
