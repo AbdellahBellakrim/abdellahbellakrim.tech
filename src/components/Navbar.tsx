@@ -23,7 +23,7 @@ export default function NavBar() {
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className="h-[65px] fixed bg-[#292C36] bg-opacity-95"
+      className="h-[65px] fixed bg-[#292C36] bg-opacity-70"
       isBordered
     >
       <NavbarContent>

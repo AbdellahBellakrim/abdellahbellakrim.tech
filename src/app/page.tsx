@@ -6,9 +6,7 @@ import WorkSection from "@/components/WorkSection";
 
 export default function LadingPage() {
   return (
-    <main
-      className={`h-full w-full flex flex-col  items-center section bg-black bg-opacity-60`}
-    >
+    <main className={`h-full w-full flex flex-col  items-center section`}>
       <HomeSection />
       <AboutSection />
       <WorkSection />
