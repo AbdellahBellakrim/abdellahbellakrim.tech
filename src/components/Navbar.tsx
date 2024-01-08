@@ -22,8 +22,9 @@ export default function NavBar() {
 
   return (
     <Navbar
+      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="h-[65px] fixed bg-[#292C36] bg-opacity-70"
+      className="h-[65px] fixed bg-[#292C36] bg-opacity-95"
       isBordered
     >
       <NavbarContent>
@@ -66,7 +67,7 @@ export default function NavBar() {
           </NavbarItem>
         ))}
       </NavbarContent>
-      <NavbarMenu className="bg-[#292C36] bg-opacity-90 font-semibold">
+      <NavbarMenu className="font-semibold bg-[#292C36] bg-opacity-95 flex flex-col items-start ">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
@@ -79,6 +80,7 @@ export default function NavBar() {
               }
               className="w-full  hover:cursor-pointer"
               onClick={() => {
+                setIsMenuOpen(false);
                 item === "Contact"
                   ? router.push("contact")
                   : router.push(`/#${item}`);

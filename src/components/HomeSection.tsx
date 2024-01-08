@@ -8,6 +8,16 @@ function HomeSection() {
       id="Home"
       className="min-h-screen min-w-full p-[24px] pt-[65px] z-[1] overflow-hidden  relative flex justify-center items-center"
     >
+      <div
+        className="
+        absolute w-full h-full opacity-30 z-0"
+        style={{
+          backgroundImage: 'url("in.jpg")',
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
       <div className="flex items-center justify-center  flex-col w-full h-fit gap-6 z-[1]">
         <motion.h1
           initial={{ opacity: 0 }}

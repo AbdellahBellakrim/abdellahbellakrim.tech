@@ -20,16 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${PoppinsFont.className} relative`}>
-        <div
-          className="fixed w-full h-full opacity-20 z-0"
-          style={{
-            backgroundImage: 'url("in.jpg")',
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
+      <body className={`${PoppinsFont.className}  bg-[#212121]`}>
         <UIProvider>{children}</UIProvider>
       </body>
     </html>
