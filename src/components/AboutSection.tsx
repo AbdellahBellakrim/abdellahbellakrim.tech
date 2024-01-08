@@ -58,13 +58,12 @@ function AboutSection() {
                 alt="goat.jpg"
                 className="object-cover w-full h-full rounded-tl-2xl rounded-br-2xl z-[1]"
               />
-              {/* <div className=" border-2 border-white bg-transparent w-full h-full  rounded-tl-2xl rounded-br-2xl z-[-1]  p-3 m-3  absolute left-[2px] top-[2px]"></div> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="h-fit min-w-[100vw] flex justify-center items-center p-12 z-[2] bg-[#292C36] bg-opacity-70">
+      <div className="h-fit min-w-[100vw] flex justify-center items-center p-12 z-[2] bg-[#343a40] bg-opacity-70">
         <div className="w-full lg:max-w-[1440px]  tex-center flex justify-center items-center flex-col h-fit ">
           <h2 className="text-[#0070F0] text-[24px] font-semibold tracking-[2.4px]">
             what I do

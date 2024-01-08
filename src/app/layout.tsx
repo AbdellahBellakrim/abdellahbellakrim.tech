@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${PoppinsFont.className}  bg-[#212121]`}>
+      <body className={`${PoppinsFont.className}  bg-[#212529]`}>
         <UIProvider>{children}</UIProvider>
       </body>
     </html>

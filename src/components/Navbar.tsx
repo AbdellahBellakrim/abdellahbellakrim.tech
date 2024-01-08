@@ -67,7 +67,7 @@ export default function NavBar() {
           </NavbarItem>
         ))}
       </NavbarContent>
-      <NavbarMenu className="font-semibold bg-[#292C36] bg-opacity-95 flex flex-col items-start ">
+      <NavbarMenu className="font-semibold bg-[#212529] bg-opacity-95 flex flex-col items-start ">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
