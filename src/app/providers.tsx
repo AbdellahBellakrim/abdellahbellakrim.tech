@@ -13,20 +13,18 @@ const HOC = (WrappedComponent: any) => {
   const HOC = (props: any) => {
     const [skill, setSkill]: any = useState([]);
     const [project, setProject]: any = useState([]);
-    const [loadingData, setLoadingData] = useState(true);
 
     useEffect(() => {
       function getData() {
         try {
           setSkill(skills);
           setProject(projects);
-          setLoadingData(false);
         } catch (error) {
           console.clear();
         }
       }
       getData();
-    }, [loadingData]);
+    }, []);
 
     return (
       <globalContext.Provider value={{ skill, setSkill, project, setProject }}>

@@ -1,5 +1,6 @@
 "use client";
 
+import { Image } from "@nextui-org/react";
 import { motion } from "framer-motion";
 
 function HomeSection() {
@@ -53,28 +54,40 @@ function HomeSection() {
             target="_blank"
             download
           >
-            <img src="cvicon.svg" alt="cvicon.svg" />
+            <Image src="cvicon.svg" alt="cvicon.svg" />
           </a>
           <a
             className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
             href={`${process.env.NEXT_PUBLIC_API_LINKEDIN}`}
             target="_blank"
           >
-            <img src="linkendinicon.svg" alt="linkendinicon.svg" />
+            <Image
+              className="rounded-none"
+              src="linkendinicon.svg"
+              alt="linkendinicon.svg"
+            />
           </a>
           <a
             className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
             href={`${process.env.NEXT_PUBLIC_API_TWITTER}`}
             target="_blank"
           >
-            <img src="twittericon.svg" alt="twittericon.svg" />
+            <Image
+              className="rounded-none"
+              src="twittericon.svg"
+              alt="twittericon.svg"
+            />
           </a>
           <a
             className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
             href={`${process.env.NEXT_PUBLIC_API_GITHUB}`}
             target="_blank"
           >
-            <img src="githubicon.svg" alt="githubicon.svg" />
+            <Image
+              className="rounded-none"
+              src="githubicon.svg"
+              alt="githubicon.svg"
+            />
           </a>
         </motion.div>
       </div>

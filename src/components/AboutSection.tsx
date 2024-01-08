@@ -2,7 +2,7 @@ import SkillsCard from "@/components/SkillsCard";
 import { motion } from "framer-motion";
 import { globalContext } from "@/lib/data.context";
 import { useContext } from "react";
-
+import { Image } from "@nextui-org/react";
 function AboutSection() {
   const context: any = useContext(globalContext);
   const skill = context.skill;
@@ -53,10 +53,10 @@ function AboutSection() {
         <div className="lg:w-[50%] flex justify-center items-center">
           <div className="h-full w-full  z-[1] flex items-center justify-center">
             <div className="w-[80%] max-w-[450px] lg:min-w-[450px] p-[2px] relative z-[1] bg-divider rounded-tl-2xl rounded-br-2xl">
-              <img
+              <Image
                 src="goat.jpg"
                 alt="goat.jpg"
-                className="object-cover w-full h-full rounded-tl-2xl rounded-br-2xl z-[1]"
+                className="object-cover w-full h-full rounded-none rounded-tl-2xl rounded-br-2xl z-[1]"
               />
             </div>
           </div>
