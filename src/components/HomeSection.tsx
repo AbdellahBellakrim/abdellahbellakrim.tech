@@ -54,10 +54,7 @@ function HomeSection() {
             target="_blank"
             download
           >
-            {/* <Image src="cvicon.svg" alt="cvicon.svg" /> */}
-            <p className="text-[#3A3A3A] font-semibold text-[12px] border border-[#3A3A3A] rounded-md p-[1px]">
-              CV
-            </p>
+            <Image src="cvicon.svg" alt="cvicon.svg" className="rounded-none" />
           </a>
           <a
             className="w-[40px] h-[40px] rounded-full bg-white flex justify-center items-center hover:cursor-pointer hover:opacity-70"
