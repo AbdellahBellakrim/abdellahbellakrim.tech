@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["About", "Work", "Blog", "Contact"];
+  const menuItems = ["Work", "About", "Blog", "Contact"];
 
   const router = useRouter();
 
@@ -24,7 +24,7 @@ export default function NavBar() {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="h-[65px] bg-opacity-100 overflow-hidden fixed"
+      className="h-[65px] bg-opacity-100 overflow-hidden"
     >
       <NavbarContent>
         <NavbarMenuToggle

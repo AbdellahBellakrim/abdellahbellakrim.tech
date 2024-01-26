@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-[calc(100vh-65px)] p-[25px] pt-[80px] flex items-center justify-center ">
+    <div className="w-full min-h-[calc(100vh-80px-65px)] p-[25px] flex items-center justify-center ">
       <div className="w-full h-full flex flex-col lg:flex-row  items-center lg:justify-between lg:max-w-[1440px] gap-4 lg:gap-6 border border-divider p-6 rounded-2xl bg-[#212529] z-[2] bg-opacity-70">
         <ContactComponent />
         <LocationComponent />
