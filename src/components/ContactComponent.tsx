@@ -10,7 +10,7 @@ function ContactComponent() {
   return (
     <form
       ref={form}
-      className="flex flex-col gap-6 w-full lg:w-auto"
+      className="flex flex-col gap-6 w-full"
       onSubmit={(event: any) => {
         event.preventDefault();
         emailjs
@@ -49,11 +49,11 @@ function ContactComponent() {
           );
       }}
     >
-      <h2 className="text-[24px] font-semibold tracking-[2.4px]">Contact Me</h2>
-      <p className="-mt-6 overflow-hidden">
+      <h2 className="text-xl font-semibold  text-white">Contact Me:</h2>
+      <p className="overflow-hidden">
         Please contact me directly at{" "}
         <a
-          className="hover:cursor-pointer underline"
+          className="hover:cursor-pointer underline text-white hover:opacity-90"
           href={`mailto:${process.env.NEXT_PUBLIC_API_EMAIL}`}
         >
           {`${process.env.NEXT_PUBLIC_API_EMAIL}`}
@@ -65,11 +65,10 @@ function ContactComponent() {
           type="text"
           label="Name"
           placeholder="Enter your name"
-          className="max-w-[700px]"
           isRequired
           name="user_name"
           id="name"
-          variant="bordered"
+          variant="underlined"
           autoComplete="some-name"
         />
       </label>
@@ -78,27 +77,25 @@ function ContactComponent() {
           type="email"
           label="Email"
           placeholder="Enter your email"
-          className="max-w-[700px]"
           isRequired
           name="user_email"
           id="email"
           autoComplete="some-email"
-          variant="bordered"
+          variant="underlined"
         />
       </label>
       <label htmlFor="message">
         <Textarea
-          className="max-w-[700px]"
           isRequired
           size="lg"
           label="Message"
           placeholder="Enter your message"
           name="message"
           id="message"
-          variant="bordered"
+          variant="underlined"
         />
       </label>
-      <Button color="primary" className="w-fit -mt-2" type="submit">
+      <Button color="primary" className="w-fit -mt-2 rounded-md" type="submit">
         Submit
       </Button>
     </form>

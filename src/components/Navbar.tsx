@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["Work", "About", "Blog", "Contact"];
+  const menuItems = ["About", "Projects", "Blog", "Contact"];
 
   const router = useRouter();
 
@@ -55,13 +55,7 @@ export default function NavBar() {
               className="w-full font-semibold hover:cursor-pointer opacity-85 hover:opacity-100"
               size="lg"
               onClick={() => {
-                item === "Contact"
-                  ? router.push("contact")
-                  : item === "Blog"
-                  ? router.push("blog")
-                  : item === "About"
-                  ? router.push("about")
-                  : router.push(`/#${item}`);
+                router.push(`/${item.toLocaleLowerCase()}`);
               }}
             >
               {item}
@@ -83,13 +77,7 @@ export default function NavBar() {
               className="w-full  hover:cursor-pointer  opacity-85 hover:opacity-100"
               onClick={() => {
                 setIsMenuOpen(false);
-                item === "Contact"
-                  ? router.push("contact")
-                  : item === "Blog"
-                  ? router.push("blog")
-                  : item === "About"
-                  ? router.push("about")
-                  : router.push(`/#${item}`);
+                router.push(`/${item.toLocaleLowerCase()}`);
               }}
               size="lg"
             >

@@ -17,7 +17,7 @@ export default function LadingPage() {
             ></Image>
           </div>
         </div>
-        <div className="w-full flex flex-col justify-around gap-4  border-b border-divider">
+        <div className="w-full flex flex-col justify-around gap-4  border-b border-divider p-1">
           <div className="font-semibold text-2xl text-[#B0ADAD] flex flex-col gap-2">
             <h2>
               <span className="text-white">Hola! I'm Abdellah,</span> also known
