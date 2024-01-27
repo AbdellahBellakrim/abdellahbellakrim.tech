@@ -3,8 +3,8 @@ import { Image } from "@nextui-org/react";
 
 function Footer() {
   return (
-    <footer className="w-full h-[80px]  flex justify-center items-center p-8 z-[2] max-w-[1050px] m-auto">
-      <div className="text-[#B0ADAD] text-[16px] font-normal text-center z-[2] flex items-center justify-between w-full  flex-col md:flex-row gap-2">
+    <footer className="w-full h-[80px]  flex justify-center items-center z-[2] px-6 max-w-[1024px] m-auto">
+      <div className="text-[#B0ADAD] text-[14px] font-normal text-center z-[2] flex items-center justify-between w-full  flex-col md:flex-row gap-2">
         <p>{`Abdellah Bellakrim © ${new Date().getFullYear()}`}</p>
 
         <div className="flex gap-6">
@@ -14,7 +14,7 @@ function Footer() {
             target="_blank"
           >
             <Image
-              className="rounded-none h-6 w-6"
+              className="rounded-none h-5 w-5"
               src="LinkedIicon.png"
               alt="LinkedIicon.png"
             />
@@ -25,7 +25,7 @@ function Footer() {
             target="_blank"
           >
             <Image
-              className="rounded-none h-6 w-6"
+              className="rounded-none h-5 w-5"
               src="TwitterIcon.png"
               alt="TwitterIcon.png"
             />
@@ -36,7 +36,7 @@ function Footer() {
             target="_blank"
           >
             <Image
-              className="rounded-none h-6 w-6"
+              className="rounded-none h-5 w-5"
               src="GithubIcon.png"
               alt="GithubIcon.png"
             />
