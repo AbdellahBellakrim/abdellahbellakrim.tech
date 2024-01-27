@@ -23,8 +23,9 @@ export default function NavBar() {
   return (
     <Navbar
       isMenuOpen={isMenuOpen}
+      isBlurred
       onMenuOpenChange={setIsMenuOpen}
-      className="h-[65px] bg-opacity-100 overflow-hidden"
+      className="h-[65px] overflow-hidden bg-[#0c0f11] max-w-[920px] mx-auto"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -68,7 +69,7 @@ export default function NavBar() {
           </NavbarItem>
         ))}
       </NavbarContent>
-      <NavbarMenu className="font-semibold flex flex-col items-start  overflow-hidden">
+      <NavbarMenu className="font-semibold flex flex-col items-start  overflow-hidden bg-[#0c0f11]">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
