@@ -5,11 +5,11 @@ function HeroSection() {
     <div className="w-full h-full py-14 flex flex-col md:flex-row gap-8">
       <div className=" max-h-36 max-w-36 p-1 bg-gradient-to-tr from-blue-700 to-red-700 rounded-full mx-auto md:m-0">
         <div className="p-[2px] bg-black rounded-full">
-          <img
+          <Image
             src="goat.jpg"
             alt="goat.jpg"
             className="rounded-full hover:cursor-pointer"
-          ></img>
+          ></Image>
         </div>
       </div>
       <div className="w-full flex flex-col justify-around gap-4  border-b border-divider p-1">

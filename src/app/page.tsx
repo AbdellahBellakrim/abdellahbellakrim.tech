@@ -10,7 +10,7 @@ export default function LadingPage() {
       className={`w-full min-h-[calc(100vh-80px-65px)] px-[25px] max-w-[920px]  mx-auto`}
     >
       <HeroSection />
-      {/* <RecentBlogs /> */}
+      <RecentBlogs />
       <RecentProjects />
     </main>
   );

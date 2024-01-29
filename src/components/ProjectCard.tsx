@@ -4,7 +4,7 @@ import { project } from "@/lib/data";
 
 export default function ProjectCard(props: project) {
   return (
-    <Card className="w-full flex h-fit md:h-[140px] rounded-xl bg-transparent  shadow-none border border-divider p-2 relative gap-3 flex-col md:flex-row">
+    <Card className="w-full flex h-fit md:h-[140px] rounded-xl shadow-none bg-white bg-opacity-5 p-2 relative gap-3 flex-col md:flex-row">
       <div
         className="w-full md:max-w-[320px] h-[160px] md:h-full opacity-70 z-0 flex justify-center items-center rounded-md"
         style={{
@@ -30,7 +30,7 @@ export default function ProjectCard(props: project) {
           </div>
         </div>
         <a
-          className="h-8 w-8 rounded-full bg-white absolute top-0 right-0 mt-4 mr-4 md:mt-2 md:mr-2 bg-opacity-70 flex justify-center items-center hover:cursor-pointer hover:bg-opacity-100"
+          className="h-7 w-7 rounded-full bg-white absolute top-0 right-0 mt-4 mr-4 md:mt-2 md:mr-2 flex justify-center items-center hover:cursor-pointer hover:bg-opacity-70"
           href={`${props.link}`}
           target="_blank"
         >

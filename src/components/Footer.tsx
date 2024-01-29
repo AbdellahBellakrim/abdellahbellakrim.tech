@@ -3,7 +3,7 @@ import { Image } from "@nextui-org/react";
 
 function Footer() {
   return (
-    <footer className="w-full h-[80px]  flex justify-center items-center z-[2] px-6 max-w-[920px] m-auto mt-4">
+    <footer className="w-full h-[80px]  flex justify-center items-center z-[2] px-6 max-w-[920px] m-auto mt-4 md:mt-0">
       <div className="text-[#B0ADAD] text-[16px] font-normal  z-[2] flex  justify-between w-full  flex-col-reverse sm:flex-row gap-3">
         <p>{`Abdellah Bellakrim © ${new Date().getFullYear()}`}</p>
 
