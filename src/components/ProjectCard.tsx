@@ -4,34 +4,43 @@ import { project } from "@/lib/data";
 
 export default function ProjectCard(props: project) {
   return (
-    <Card className="w-full shadow-none flex h-[140px] rounded-md bg-transparent border border-divider">
-      <div className="overflow-hidden rounded-none w-[280px] h-full bg-red-700 flex justify-center items-center">
-        <img
-          className="min-w-full min-h-full rounded-none object-cover"
-          src={props.banner}
-        ></img>
-      </div>
+    <Card className="w-full flex h-fit md:h-[140px] rounded-xl bg-transparent  shadow-none border border-divider p-2 relative gap-3 flex-col md:flex-row">
+      <div
+        className="w-full md:max-w-[320px] h-[160px] md:h-full opacity-70 z-0 flex justify-center items-center rounded-md"
+        style={{
+          backgroundImage: `url("${props.banner}")`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
 
-      {/* <CardBody className="gap-4 flex p-6 justify-between">
+      <div className="flex flex-col justify-around h-1/2 md:h-full w-full p-1 gap-3">
+        <div className="flex flex-col text-white font-semibold text-[20px] truncate">
+          {props.header}
+        </div>
+
         <div className="gap-4 flex flex-col">
-          <div className="flex flex-col text-white font-semibold text-[20px] truncate">
-            {props.header}
-          </div>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-1">
             {props.tech.map((techno, index) => (
-              <Code color="primary" key={index}>
+              <Code color="default" key={index}>
                 {techno}
               </Code>
             ))}
           </div>
         </div>
-        <div className="gap-4 flex flex-col h-fit">
-          <Divider />
-          <Link isExternal showAnchorIcon href={props.link}>
-            Visit source code on GitHub.
-          </Link>
-        </div>
-      </CardBody> */}
+        <a
+          className="h-8 w-8 rounded-full bg-white absolute top-0 right-0 mt-4 mr-4 md:mt-2 md:mr-2 bg-opacity-70 flex justify-center items-center hover:cursor-pointer hover:bg-opacity-100"
+          href={`${props.link}`}
+          target="_blank"
+        >
+          <Image
+            className="rounded-none h-5 w-5"
+            src="github.png"
+            alt="github.png"
+          />
+        </a>
+      </div>
     </Card>
   );
 }

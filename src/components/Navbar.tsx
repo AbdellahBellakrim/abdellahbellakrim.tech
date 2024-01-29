@@ -24,6 +24,7 @@ export default function NavBar() {
     <Navbar
       isMenuOpen={isMenuOpen}
       isBlurred
+      isBordered
       onMenuOpenChange={setIsMenuOpen}
       className="h-[65px] overflow-hidden bg-[#0c0f11] max-w-[920px] mx-auto"
     >
