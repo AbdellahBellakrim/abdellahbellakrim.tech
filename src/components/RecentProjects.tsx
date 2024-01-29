@@ -24,7 +24,7 @@ function RecentProjects() {
         ))}
       </div>
       <h3
-        className="text-blue-700 font-semibold hover:cursor-pointer hover:opacity-80"
+        className="text-blue-700 font-semibold hover:cursor-pointer hover:opacity-80 "
         onClick={() => {
           router.push("/projects");
         }}

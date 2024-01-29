@@ -13,16 +13,16 @@ function HeroSection() {
         </div>
       </div>
       <div className="w-full flex flex-col justify-around gap-4  border-b border-divider p-1">
-        <a className="font-semibold text-2xl text-[#B0ADAD] flex flex-col gap-2">
+        <div className="font-semibold text-2xl text-[#B0ADAD] flex flex-col gap-2">
           <h2>
             <span className="text-white">Hola! I'm Abdellah,</span> also known
             as <span className="text-white">c0d3cruch3r</span>.
           </h2>
           <h2>I'm a software engineer and web developer.</h2>
-        </a>
+        </div>
         <div className="w-full flex flex-col md:flex-row gap-4 md:gap-16 text-[#B0ADAD] items-start">
           <a
-            className="flex gap-2 justify-center items-center text-end hover:cursor-pointer hover:text-blue-500"
+            className="flex gap-2 justify-center items-center text-end hover:cursor-pointer hover:text-blue-500 hover:bg-opacity-10 hover:bg-blue-700 rounded-xl p-1"
             href={`${process.env.NEXT_PUBLIC_API_TWITTER}`}
             target="_blank"
           >
@@ -34,7 +34,7 @@ function HeroSection() {
             <span>Twitter</span>
           </a>
           <a
-            className="flex gap-2 justify-center items-center text-end hover:cursor-pointer hover:text-blue-500"
+            className="flex gap-2 justify-center items-center text-end hover:cursor-pointer hover:text-blue-500 hover:bg-opacity-10 hover:bg-blue-700 rounded-xl p-1"
             href={`${process.env.NEXT_PUBLIC_API_LINKEDIN}`}
             target="_blank"
           >
@@ -46,7 +46,7 @@ function HeroSection() {
             <span>LinkedIn</span>
           </a>
           <a
-            className="flex gap-2 justify-center items-center text-end hover:cursor-pointer hover:text-orange-500"
+            className="flex gap-2 justify-center items-center text-end hover:cursor-pointer hover:text-orange-500 hover:bg-opacity-10 hover:bg-orange-700 rounded-xl p-1"
             href={`${process.env.NEXT_PUBLIC_API_GITHUB}`}
             target="_blank"
           >
@@ -58,7 +58,7 @@ function HeroSection() {
             <span>Github</span>
           </a>
           <a
-            className="flex gap-2 justify-center items-center text-end hover:cursor-pointer hover:text-green-500"
+            className="flex gap-2 justify-center items-center text-end hover:cursor-pointer hover:text-green-500 hover:bg-opacity-10 hover:bg-green-700 rounded-xl p-1"
             href={`mailto:${process.env.NEXT_PUBLIC_API_EMAIL}`}
           >
             <Image
